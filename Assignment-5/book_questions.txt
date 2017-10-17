@@ -1,0 +1,61 @@
+CHAPTER 4
+17.<EditText
+	android:id="@+id/age"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_toRightOf="@+id/name"
+	android:inputType="numberDecimal" />
+
+18.<activity
+	android:name=".MyActivity"
+	android:screenOrientation="portrait">
+   </activity>
+
+19.public void goToSecondActivity(View v){
+	Intent myIntent = new Intent(this,SecondActivity.class);
+	this.startActivity(myIntent);
+}
+
+20.@override
+   protected void onRestart(){
+   super.onRestart();
+   modifyThisActivity();
+}
+
+21.<scale
+	android:fromXScale="0.0"
+	android:toXScale="1.0"
+	android:fromYScale="0.0"
+	android:toYScale="1.0"
+	android:pivotX="0.0"
+	android:pivotY="0.0"
+   	android:duration="2000"/>
+
+22.<rotate
+	android:fromDegrees="0"
+	android:toDegrees="180"
+	android:pivotX="0.0"
+	android:pivotY="0.0"
+	android:duration="5000"/>
+	
+
+CHAPTER 7
+
+1.A
+2.B
+3.C
+4.B
+5.C
+6.D
+7.B
+
+18.protected void onCreate(Bundle savedInstanceState){
+	super.OnCreate(savedInstanceState);
+	detector = new GestureDetector(this,this);
+	detector.setOnDoubleTapListener(this);
+}
+
+19.public boolean onTouchEvent(MotionEvent event){
+	detector.onTouchEvent(event);
+	return True;
+}
