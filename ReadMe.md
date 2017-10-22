@@ -8,4 +8,6 @@
 - Fragments
 - Animation
 - Android's Widget
-- GUI programmatically 
+- GUI programmatically
+- XML 
+- RESTful API 
