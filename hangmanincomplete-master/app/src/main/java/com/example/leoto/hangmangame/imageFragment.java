@@ -73,7 +73,7 @@ public class imageFragment extends Fragment {
         txtDash3 = (TextView)view.findViewById(R.id.txtDash3);
         txtDash4 = (TextView)view.findViewById(R.id.txtDash4);
 
-        hangman = (ImageView) view.findViewById(R.id.hangman);
+        hangman = (ImageView) view.findViewById(R.id.imageView);
 
 
         return view;
@@ -83,6 +83,7 @@ public class imageFragment extends Fragment {
     public void logicPart(View v, String word ){
 
 
+        Log.i("imagFrag","Goes here");
         preSelectedWord = word;
         int done_flag = 0;
 
@@ -94,6 +95,7 @@ public class imageFragment extends Fragment {
 
         if (count < 6) {
 
+            Log.i("imagFrag","Goes here");
             btnClicked.setClickable(false);
             btnClicked.setEnabled(false);
             btnClicked.setBackgroundColor(Color.WHITE);
@@ -101,28 +103,31 @@ public class imageFragment extends Fragment {
             if (showCorrectInput(btnValue) != 1) {
                 switch(count) {
                     case 0:
-                        hangman.setImageResource(R.drawable.h1);
+                        Log.i("imagFrag","Goes here END");
+                        // error here
+                        //hangman.setImageResource(R.drawable.h1);
                         break;
                     case 1:
-                        hangman.setImageResource(R.drawable.h2);
+                        //hangman.setImageResource(R.drawable.h2);
                         break;
                     case 2:
-                        hangman.setImageResource(R.drawable.h3);
+                        //hangman.setImageResource(R.drawable.h3);
                         break;
                     case 3:
-                        hangman.setImageResource(R.drawable.h4);
+                        //hangman.setImageResource(R.drawable.h4);
                         break;
                     case 4:
-                        hangman.setImageResource(R.drawable.h5);
+                        //hangman.setImageResource(R.drawable.h5);
                         break;
                     case 5:
-                        hangman.setImageResource(R.drawable.h6);
+                        //hangman.setImageResource(R.drawable.h6);
                         break;
                 }
                 count ++;
                 Log.i(MyFlag, "count++");
                 if (score == 5) {
                     done_flag = 1;
+
                     Toast.makeText(getActivity().getApplicationContext(), "Play Again? Hit NEW", Toast.LENGTH_SHORT).show();
                 }
             }

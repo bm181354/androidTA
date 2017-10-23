@@ -17,20 +17,21 @@ public class hintFragment extends Fragment {
     public hintFragment() {
         // Required empty public constructor
     }
-    private TextView hint;
+    public TextView hint1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.hint,container,false);
 
-        hint = (TextView) view.findViewById(R.id.hint);
+        hint1 = (TextView) view.findViewById(R.id.txtactualhint);
         return view;
     }
 
 
     public void message(String hintTxt){
-        hint.setText(hintTxt);
+
+        hint1.setText(hintTxt);
 
     }
 

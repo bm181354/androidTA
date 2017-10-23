@@ -132,6 +132,7 @@ public class ButtonsFragment extends Fragment {
         // uniformly pick a number between 0 - 4
         Random A = new Random();
         index = A.nextInt(5);
+
         preSelectedWord = words[index];
         preSelectedHint = hints[index];
 
@@ -148,8 +149,10 @@ public class ButtonsFragment extends Fragment {
         public void onClick(View v) {
 
 
+            Log.i("onCLick","Goes here");
             preSelectedWord = words[index];
             preSelectedHint = hints[index];
+
             sendMessage(v, preSelectedHint, preSelectedWord);
         }
     };
