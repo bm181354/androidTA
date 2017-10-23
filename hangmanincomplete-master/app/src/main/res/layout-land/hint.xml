@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txthint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtactualhint"
+        android:layout_alignBottom="@+id/txtactualhint"
+        android:text="HINT:"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtactualhint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_toEndOf="@+id/txthint"
+        android:text="TextView"
+        android:textSize="25sp" />
+</RelativeLayout>

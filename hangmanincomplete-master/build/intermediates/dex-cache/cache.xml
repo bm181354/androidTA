@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/bikenmaharjan/Downloads/hangmanincomplete-master/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c80ebabd20fe940ff8ced32fb1bd4504c168e705">
+        <dex dex="/Users/bikenmaharjan/Downloads/hangmanincomplete-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_30f7a43d2c97118cbd4f4a6f7fc0c68cf1dc213a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bikenmaharjan/Downloads/hangmanincomplete-master/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/bikenmaharjan/Downloads/hangmanincomplete-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0a23a79022c5c9cca84e140da2f2d4f4341e4fcf/classes.dex" />
+    </item>
+
+</items>

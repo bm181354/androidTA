@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context="com.example.leoto.hangmangame.MainActivity"
+    android:layout_weight="1">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5.5"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/hangman"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:paddingBottom="15dp"
+            app:srcCompat="@drawable/h0" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.5"
+            android:columnCount="5"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:rowCount="2">
+
+            <TextView
+                android:id='@+id/txtInput0'
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:textAlignment="center"
+                android:textSize="15pt" />
+
+            <TextView
+                android:id='@+id/txtInput1'
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:textAlignment="center"
+                android:textSize="15pt" />
+
+            <TextView
+                android:id='@+id/txtInput2'
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:textAlignment="center"
+                android:textSize="15pt" />
+
+            <TextView
+                android:id='@+id/txtInput3'
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_column="3"
+                android:layout_row="0"
+                android:textAlignment="center"
+                android:textSize="15pt" />
+
+            <TextView
+                android:id='@+id/txtInput4'
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_column="4"
+                android:layout_row="0"
+                android:textAlignment="center"
+                android:textSize="15pt" />
+
+            <TextView
+                android:id='@+id/txtDash0'
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:text="---"
+                android:textAlignment="center"
+                android:textSize="15pt" />
+
+            <TextView
+                android:id='@+id/txtDash1'
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:text="---"
+                android:textAlignment="center"
+                android:textSize="15pt" />
+
+            <TextView
+                android:id='@+id/txtDash2'
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_column="2"
+                android:layout_row="1"
+                android:text="---"
+                android:textAlignment="center"
+                android:textSize="15pt" />
+
+            <TextView
+                android:id='@+id/txtDash3'
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_column="3"
+                android:layout_row="1"
+                android:text="---"
+                android:textAlignment="center"
+                android:textSize="15pt" />
+
+            <TextView
+                android:id='@+id/txtDash4'
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_column="4"
+                android:layout_row="1"
+                android:text="---"
+                android:textAlignment="center"
+                android:textSize="15pt" />
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/txtChoose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingBottom="15dp"
+            android:text="CHOOSE A LETTER"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.5"
+        android:columnCount="5"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:rowCount="6">
+
+
+        <Button
+            android:id="@+id/btnA"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="A" />
+
+        <Button
+            android:id="@+id/btnB"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="B" />
+
+        <Button
+            android:id="@+id/btnC"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/btnD"
+            android:layout_width="68dp"
+            android:layout_height="35dp"
+            android:text="D" />
+
+        <Button
+            android:id="@+id/btnE"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="E" />
+
+        <Button
+            android:id="@+id/btnF"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="F" />
+
+        <Button
+            android:id="@+id/btnG"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="G" />
+
+        <Button
+            android:id="@+id/btnH"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="H" />
+
+        <Button
+            android:id="@+id/btnI"
+            android:layout_width="68dp"
+            android:layout_height="35dp"
+            android:text="I" />
+
+        <Button
+            android:id="@+id/btnJ"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="J" />
+
+        <Button
+            android:id="@+id/btnK"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="K" />
+
+        <Button
+            android:id="@+id/btnL"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="L" />
+
+        <Button
+            android:id="@+id/btnM"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="M" />
+
+        <Button
+            android:id="@+id/btnN"
+            android:layout_width="68dp"
+            android:layout_height="35dp"
+            android:text="N" />
+
+        <Button
+            android:id="@+id/btnO"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="O" />
+
+        <Button
+            android:id="@+id/btnP"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="P" />
+
+        <Button
+            android:id="@+id/btnQ"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="Q" />
+
+        <Button
+            android:id="@+id/btnR"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="R" />
+
+        <Button
+            android:id="@+id/btnS"
+            android:layout_width="68dp"
+            android:layout_height="35dp"
+            android:text="S" />
+
+        <Button
+            android:id="@+id/btnT"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="T" />
+
+        <Button
+            android:id="@+id/btnU"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="U" />
+
+        <Button
+            android:id="@+id/btnV"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="V" />
+
+        <Button
+            android:id="@+id/btnW"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="W" />
+
+        <Button
+            android:id="@+id/btnX"
+            android:layout_width="68dp"
+            android:layout_height="35dp"
+            android:text="X" />
+
+        <Button
+            android:id="@+id/btnY"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="Y" />
+
+        <Button
+            android:id="@+id/btnZ"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="Z" />
+
+        <Button
+            android:id="@+id/btnNew"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:layout_column="4"
+            android:layout_row="5"
+            android:text="NEW" />
+
+
+    </GridLayout>
+
+</android.widget.LinearLayout>
