@@ -105,22 +105,22 @@ public class imageFragment extends Fragment {
                     case 0:
                         Log.i("imagFrag","Goes here END");
                         // error here
-                        //hangman.setImageResource(R.drawable.h1);
+                        hangman.setImageResource(R.drawable.h1);
                         break;
                     case 1:
-                        //hangman.setImageResource(R.drawable.h2);
+                        hangman.setImageResource(R.drawable.h2);
                         break;
                     case 2:
-                        //hangman.setImageResource(R.drawable.h3);
+                        hangman.setImageResource(R.drawable.h3);
                         break;
                     case 3:
-                        //hangman.setImageResource(R.drawable.h4);
+                        hangman.setImageResource(R.drawable.h4);
                         break;
                     case 4:
-                        //hangman.setImageResource(R.drawable.h5);
+                        hangman.setImageResource(R.drawable.h5);
                         break;
                     case 5:
-                        //hangman.setImageResource(R.drawable.h6);
+                        hangman.setImageResource(R.drawable.h6);
                         break;
                 }
                 count ++;
@@ -176,6 +176,10 @@ public class imageFragment extends Fragment {
         Log.i(MyFlag, "o_flag: " + String.valueOf(o_flag));
 
         return o_flag;
+    }
+
+    public void initialMessage(String word){
+
     }
 
 }

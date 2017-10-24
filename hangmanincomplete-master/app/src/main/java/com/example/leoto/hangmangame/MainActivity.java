@@ -18,6 +18,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements ButtonsFragment.ButtonsFragmentListener {
 
+    hintFragment hintFrag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +38,19 @@ public class MainActivity extends AppCompatActivity implements ButtonsFragment.B
         imageFragment imgFrag = (imageFragment) getSupportFragmentManager().findFragmentById(R.id.imageFragment);
         imgFrag.logicPart(v,word);
 
-
-        hintFragment hintFrag = (hintFragment) getSupportFragmentManager().findFragmentById(R.id.hintFragment);
+        hintFrag = (hintFragment) getSupportFragmentManager().findFragmentById(R.id.hintFragment);
         hintFrag.message(hint);
 
 
     }
+
+    @Override
+    public void intialProcess(String hint, String word) {
+
+        hintFrag = (hintFragment) getSupportFragmentManager().findFragmentById(R.id.hintFragment);
+        hintFrag.message(hint);
+
+    }
+
+
 }

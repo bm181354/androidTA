@@ -49,6 +49,7 @@ public class ButtonsFragment extends Fragment {
     public interface ButtonsFragmentListener {            //this is just an interface definition.
          //it could live in its own file.  placed here for convenience.
         public void sendMessageToMain(View v, String hint, String Word);
+        public void intialProcess( String hint, String word);
     }
 
     ButtonsFragmentListener BFL;
@@ -56,7 +57,14 @@ public class ButtonsFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        BFL = (ButtonsFragmentListener) context;  //context is a handle to the main activity, let's bind it to our interface.
+
+
+        try {
+            BFL = (ButtonsFragmentListener) context;  //context is a handle to the main activity, let's bind it to our interface.
+        }catch(Exception err){
+            throw new ClassCastException(err.toString());
+        }
+
     }
 
 
@@ -141,6 +149,10 @@ public class ButtonsFragment extends Fragment {
             alreadyClicked[i] = false;
         }
 
+        //sendMessage(v, preSelectedHint, preSelectedWord);
+        //BFL.intialProcess(preSelectedHint,preSelectedWord);
+
+        //method(preSelectedHint);
 
         return view;
     }
@@ -149,16 +161,37 @@ public class ButtonsFragment extends Fragment {
         public void onClick(View v) {
 
 
-            Log.i("onCLick","Goes here");
-            preSelectedWord = words[index];
-            preSelectedHint = hints[index];
+            if (v.getId() == R.id.btnNew){
 
-            sendMessage(v, preSelectedHint, preSelectedWord);
+
+                Toast.makeText(getActivity().getApplicationContext(),"Start new Game",Toast.LENGTH_SHORT).show();
+
+                Intent i = getActivity().getBaseContext().getPackageManager().getLaunchIntentForPackage(getActivity().getBaseContext().getPackageName());
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
+
+
+            }
+            else {
+                Log.i("onCLick", "Goes here");
+                preSelectedWord = words[index];
+                preSelectedHint = hints[index];
+                sendMessage(v, preSelectedHint, preSelectedWord);
+            }
+
         }
     };
 
     public void sendMessage(View v, String hint, String word){
         BFL.sendMessageToMain(v,hint,word);
+    }
+
+    public void method(String hint){
+
+        Intent i = new Intent(getActivity(),MainActivity.class);
+        i.putExtra("hint",hint);
+        getActivity().startActivity(i);
+
     }
 
 }
